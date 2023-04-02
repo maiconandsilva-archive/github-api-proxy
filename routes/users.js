@@ -1,7 +1,7 @@
 const express = require('express');
 const request = require('../utils/request');
 
-var router = express.Router();
+const router = express.Router();
 
 router.get('/', request.request);
 router.get('/:username/repos', request.request);
