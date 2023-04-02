@@ -1,0 +1,17 @@
+// See https://github.com/octokit/core.js#options
+module.exports = {
+    requestConf: {
+        headers: {
+            'X-GitHub-Api-Version': '2022-11-28'
+        },
+        // request: {
+        //     fetch: async function() {
+        //         console.log(arguments);
+        //         fetch(...arguments);
+        //     },
+        // }
+    },
+    appConf: {
+        GITHUB_URL: 'https://api.github.com',
+    },
+};
