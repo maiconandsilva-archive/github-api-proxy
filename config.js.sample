@@ -12,6 +12,7 @@ module.exports = {
         // }
     },
     appConf: {
+        API_BASE_URL: '/api',
         GITHUB_URL: 'https://api.github.com',
     },
 };

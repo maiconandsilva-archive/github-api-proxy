@@ -6,7 +6,8 @@ const { appConf, requestConf } = require('../config');
 const requestGithubAPI = octoRequest.defaults(requestConf);
 
 async function request(req, res, next) {
-    let fullUrl = (req.baseUrl + req.path).replace(/\/+$/, '');
+    let fullUrl = (req.baseUrl + req.path).replace(appConf.API_BASE_URL, '');
+    fullUrl = fullUrl.replace(/\/+$/, ''); // remove trailing slash
     createCustomRequest(fullUrl)(req, res, next);
 }
 
