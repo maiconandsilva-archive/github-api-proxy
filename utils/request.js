@@ -41,8 +41,11 @@ function createCustomRequest(url) {
             res.end();
             return;
         }
-        const link = response.headers.link?.replace(appConf.GITHUB_URL, '');
+        
+        const regexGithubURL = new RegExp(appConf.GITHUB_URL, 'g');
+        const link = response.headers.link?.replace(regexGithubURL, '');
         if (link) res.set('link', link);
+        
         res.status(response.status).send(response.data);
     };
 }
