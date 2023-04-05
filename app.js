@@ -12,7 +12,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(appConf.API_BASE_URL, api);
+app.use(appConf.API_BASE_PATH, api);
 
 api.use(cors())
 api.use('/users', usersRouter);
