@@ -8,6 +8,9 @@
     "dev": "nodemon index.js",
     "test": "jest index.js"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "@octokit/request": "^6.2.3",
     "cors": "^2.8.5",
