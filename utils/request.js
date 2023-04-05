@@ -13,7 +13,7 @@ async function request(req, res, next) {
 
 function createCustomRequest(url) {
   return async (req, res, next) => {
-    let response
+    let githubResponse
 
     try {
       const request_data = {
@@ -27,8 +27,8 @@ function createCustomRequest(url) {
       }
 
       debug('REQUEST_DATA', request_data)
-      response = await requestGithubAPI(request_data)
-      debug('RESPONSE', response)
+      githubResponse = await requestGithubAPI(request_data)
+      debug('RESPONSE', githubResponse)
     } catch (e) {
       switch (e.name) {
         case 'HttpError':
@@ -43,10 +43,10 @@ function createCustomRequest(url) {
     }
 
     const regexGithubURL = new RegExp(appConf.GITHUB_URL, 'g')
-    const link = response.headers.link?.replace(regexGithubURL, '')
+    const link = githubResponse.headers.link?.replace(regexGithubURL, '')
     if (link) res.set('link', link)
 
-    res.status(response.status).send(response.data)
+    res.status(githubResponse.status).send(githubResponse.data)
   }
 }
 
