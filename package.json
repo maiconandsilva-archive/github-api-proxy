@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www",
-    "test": "jest ./bin/www"
+    "build": "node build.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest index.js"
   },
   "dependencies": {
     "@octokit/request": "^6.2.3",
