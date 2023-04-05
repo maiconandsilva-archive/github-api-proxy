@@ -11,12 +11,6 @@
 yarn install
 ```
 
-#### 2. Copy the file `config.js.sample` to `config.js`.
-
-```sh
-yarn build
-```
-
 ### Usage
 
 #### Development
