@@ -1,10 +1,10 @@
-const express = require('express');
-const request = require('../utils/request');
+const express = require('express')
+const { request, createCustomRequest } = require('../utils/request')
 
-const router = express.Router();
+const router = express.Router()
 
-router.get('/', request.request);
-router.get('/:username/repos', request.request);
-router.get('/:username/details', request.createCustomRequest('/users/:username'));
+router.get('/', request)
+router.get('/:username/repos', request)
+router.get('/:username/details', createCustomRequest('/users/:username'))
 
-module.exports = router;
+module.exports = router
