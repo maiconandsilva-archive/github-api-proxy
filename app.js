@@ -21,4 +21,10 @@ api.use('/docs', swaggerRouter)
 api.use('/users', usersRouter)
 // api.use(request) // Relay to Github (beware of rate limits when using this)
 
+
+const redirectToSwaggerDocs = async (req, res) => res.redirect('/api/docs')
+
+api.use('/', redirectToSwaggerDocs)
+app.use('/', redirectToSwaggerDocs)
+
 module.exports = app
