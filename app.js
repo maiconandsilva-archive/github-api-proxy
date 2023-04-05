@@ -17,6 +17,6 @@ app.use(appConf.API_BASE_PATH, api)
 
 api.use(cors())
 api.use('/users', usersRouter)
-api.use(request)
+// api.use(request) // Relay to Github (beware of rate limits when using this)
 
 module.exports = app
