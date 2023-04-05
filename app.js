@@ -3,6 +3,7 @@ const path = require('path')
 const logger = require('morgan')
 const cors = require('cors')
 const usersRouter = require('./routes/users')
+const swaggerRouter = require('./routes/swagger')
 const { request } = require('./utils/request')
 const { appConf } = require('./config')
 
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(appConf.API_BASE_PATH, api)
 
 api.use(cors())
+api.use('/docs', swaggerRouter)
 api.use('/users', usersRouter)
 // api.use(request) // Relay to Github (beware of rate limits when using this)
 

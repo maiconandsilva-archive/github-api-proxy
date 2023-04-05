@@ -1,0 +1,82 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Github API Proxy",
+    "description": "Simplified Spec."
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "paths": {
+    "/users": {
+      "get": {
+        "description": "Get users paginated",
+        "parameters": [
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/users/{username}/repos": {
+      "get": {
+        "description": "Get user's repos paginated",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/users/{username}/details": {
+      "get": {
+        "description": "Get user complete information",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "user-agent",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    }
+  }
+}

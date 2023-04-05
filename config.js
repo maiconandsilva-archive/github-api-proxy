@@ -16,5 +16,9 @@ module.exports = {
     appConf: {
         API_BASE_PATH: process.env.API_BASE_PATH || '/api',
         GITHUB_URL: process.env.GITHUB_URL || 'https://api.github.com',
+        SWAGGER_FILE: process.env.SWAGGER_FILE || './swagger-output.json',
+        swaggerAutogenConf: {
+            
+        },
     },
 };
