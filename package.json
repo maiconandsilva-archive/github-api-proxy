@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest index.js",
+    "test": "jest tests/**",
     "gen-swagger": "node gen-swagger.js"
   },
   "dependencies": {
