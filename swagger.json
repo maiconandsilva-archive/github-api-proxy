@@ -25,7 +25,11 @@
             "type": "integer"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
       }
     },
     "/users/{username}/repos": {
@@ -51,7 +55,11 @@
             "type": "integer"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
       }
     },
     "/users/{username}/details": {
@@ -63,19 +71,13 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "authorization",
-            "in": "header",
-            "type": "string"
-          },
-          {
-            "name": "user-agent",
-            "in": "header",
-            "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
       }
     }
   }
