@@ -23,6 +23,7 @@ function createCustomRequest(url) {
         url,
         headers: {
           'user-agent': req.headers['user-agent'],
+          authorization: req.headers['authorization'],
         }
       }
 
