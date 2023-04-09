@@ -42,7 +42,7 @@ GITHUB_URL=https://api.github.com # Github API URL
 
 ---
 
-## This repository is an answer for the following test
+## This repository is an answer to the following test
 
 You will have to consume the GitHub APIs, more precisely the users and repositories endpoints, and create an application.
 
